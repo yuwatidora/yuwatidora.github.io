@@ -6,7 +6,11 @@
 }
 
 .menu {
-    margin-bottom:5%;
+  position: fixed;
+  bottom: 5%;
+  left:50%;
+  transform: translateX(-50%);
+
 }
 
 .link {
@@ -19,5 +23,5 @@
 
 .link:hover,
 .active {
-  color: #0070f3;
+  text-decoration: underline;
 }

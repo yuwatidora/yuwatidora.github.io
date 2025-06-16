@@ -1,0 +1,43 @@
+.head{
+    font-family: 'Sahitya', sans-serif;
+    font-size: 300%;
+    color: floralwhite;
+    margin-left: 15%;
+    margin-top:2%;
+}
+.body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* left:50%; */
+    transform: translateX(15%);
+    /* background-color: #454545; */
+    background-color: rgba(69, 69, 69, 0.8);
+    border-radius: 40px;
+    max-width: 80%;
+    margin-top: 1%;
+    /* box-shadow: 0 0 20px 1px #08080866; */
+
+    
+}
+.p{
+    width: 45%;
+    font-family: 'Sahitya', sans-serif;
+    color: #ffff;
+    font-size: 135%;
+    text-shadow: 0 0 1px floralwhite;
+    padding-left: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.acheik_color{
+    margin-left: 15%;
+}
+.image_wrapper {
+    margin-top: 1%;
+    padding-right: 5%;
+    padding-top: 2%;
+  /* border: 3px solid floralwhite;
+  border-radius: 40px; */
+  
+}
