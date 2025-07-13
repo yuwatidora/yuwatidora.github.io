@@ -1,0 +1,41 @@
+.head{
+    font-family: 'Sahitya', sans-serif;
+    font-size: 300%;
+    color: #FFFFE0;
+    margin-left: 0%;
+    margin-top: 0%;
+    z-index: 100;
+    position: relative;
+    padding-left: 0px;
+    padding-top: 20px;
+}
+
+.underline {
+    margin-top: -30px;
+    margin-left: -15px;
+}
+
+.bg{
+    background-color: rgba(69, 69, 69, 0.7);
+    margin: 50px auto 20px auto;
+    padding: 30px;
+    max-width: 80%;
+    border-radius: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.projects_container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .projects_container {
+        grid-template-columns: 1fr;
+    }
+}

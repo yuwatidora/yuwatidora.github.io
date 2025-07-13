@@ -6,9 +6,19 @@ import Acheik_Color from '/public/assets/acheik-color.png'
 import styles from "./about.module.css"
 export default function About(){
     return(
-        <div>
-            <div className={styles.head}>about</div>
-            <Image src={Acheik_Color} alt="acheik-image"width = {200} className ={styles.acheik_color}/>
+        <div className={styles.bg}>
+            {/* <div className={styles.acheik_color}>
+                <Image src={Acheik_Color} alt="acheik-image" width={400} />
+                <Image src={Acheik_Color} alt="acheik-image" width={400} />
+                <Image src={Acheik_Color} alt="acheik-image" width={400} />
+                <Image src={Acheik_Color} alt="acheik-image" width={400} />
+            </div> */}
+            <div className={styles.head}>
+                about me
+                <div className={styles.underline}>
+                    <Image src={Acheik_Color} alt="acheik-underline" width={200} />
+                </div>
+            </div>
             <div className={styles.body}>
                 <div className = {styles.p}>
                     <p>Hi!</p>
@@ -18,7 +28,7 @@ export default function About(){
                     </p>
                 </div>
                 <div className={styles.image_wrapper}>
-                    <Image src={pp} width ={350} alt="profile image" 
+                    <Image src={pp} width ={300} alt="profile image" 
                     style={{ borderRadius: '40px' }}/>
                 </div>
                 

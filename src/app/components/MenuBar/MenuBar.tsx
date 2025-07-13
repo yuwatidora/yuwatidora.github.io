@@ -3,6 +3,7 @@ import Link from 'next/link';
 import {usePathname} from 'next/navigation';
 import { useEffect, useState } from 'react';
 import styles from './Menubar.module.css'
+//TODO: Make background blur
 
 const navItems = [
     { href: '/', label: 'home'},
@@ -26,7 +27,7 @@ export default function MenuBar(){
         <nav className = {styles.menu}>
             {navItems.map((item) => (
                 <Link
-                    style={{ fontSize: '2rem', padding: '1.5rem'}}
+                    style={{ fontSize: '1.4rem', padding: '0.8rem'}}
                     key ={item.href}
                     href = {item.href}
                     className={`${styles.link} ${pathname === item.href ? styles.active: ''}`}
