@@ -1,8 +1,8 @@
 'use client'
 import { useState } from "react";
-import MenuBar from "../components/MenuBar/MenuBar";
-import ProjectCard from "../components/ProjectCard/ProjectCard";
-import ProjectFilter from "../components/ProjectFilter/ProjectFilter";
+import MenuBar from "../../../components/MenuBar/MenuBar";
+import ProjectCard from "../../../components/ProjectCard/ProjectCard";
+import ProjectFilter from "../../../components/ProjectFilter/ProjectFilter";
 import Image from "next/image";
 import Acheik_Color from '/public/assets/acheik-color.png'
 import styles from "./projects.module.css"

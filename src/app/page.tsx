@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
-import MenuBar from "./components/MenuBar/MenuBar";
-import Heading from "./components/Heading/Heading";
-import LoadingTransition from "./components/LoadingTransition/LoadingTransition";
+import MenuBar from "../../components/MenuBar/MenuBar";
+import Heading from "../../components/Heading/Heading";
+import LoadingTransition from "../../components/LoadingTransition/LoadingTransition";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);

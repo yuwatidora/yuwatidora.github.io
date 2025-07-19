@@ -1,5 +1,5 @@
 'use client'
-import MenuBar from "../components/MenuBar/MenuBar";
+import MenuBar from "../../../components/MenuBar/MenuBar";
 import Image from "next/image";
 import pp from "/public/assets/port_image.png"
 import Acheik_Color from '/public/assets/acheik-color.png'
