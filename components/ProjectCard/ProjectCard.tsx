@@ -1,18 +1,32 @@
 import styles from "./ProjectCard.module.css"
+import Image from "next/image";
+
+import { StaticImageData } from "next/image";
+import type { ImageProps } from "next/image";
 
 interface ProjectCardProps {
     title: string;
     description: string;
     technologies: string[];
     github: string;
+    image?: string | StaticImageData;  // Made optional
 }
 
-export default function ProjectCard({ title, description, technologies, github }: ProjectCardProps) {
+export default function ProjectCard({ title, description, technologies, github, image}: ProjectCardProps) {
     return (
         <div className={styles.project_item}>
             <a href={github} target="_blank" rel="noopener noreferrer" className={styles.project_image_link}>
                 <div className={styles.project_image_placeholder}>
-                    {/* Image will go here */}
+                    {image ? (
+                        <Image src={image} 
+                        alt = "project image"
+                        className="cardPic"
+                        priority/>
+                    ) : (
+                        <div className={styles.no_image_placeholder}>
+                            <span>No Image Available</span>
+                        </div>
+                    )}
                 </div>
             </a>
             
