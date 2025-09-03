@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react";
 import MenuBar from "../../../components/MenuBar/MenuBar";
+import SideMenu from "../components/SideMenu/SideMenu";
 import ProjectCard from "../../../components/ProjectCard/ProjectCard";
 import ProjectFilter from "../../../components/ProjectFilter/ProjectFilter";
 import Image from "next/image";
@@ -9,6 +10,7 @@ import styles from "./projects.module.css"
 import mamawell from "../../../public/assets/shot.png"
 import cashew from "../../../public/assets/cashew.png"
 import romi from "../../../public/assets/romiFrontView.png"
+import asl from "../../../public/assets/asl.png"
 
 export default function Projects(){
     const [activeFilter, setActiveFilter] = useState("All");
@@ -36,7 +38,8 @@ export default function Projects(){
             description: "Python GUI that translates signed alphabets in real-time",
             technologies: ["Python", "TensorFlow", "OpenCV", "Mediapipe"],
             github: "https://github.com/yuwatidora/asl_live_detection",
-            category: "AI/ML"
+            category: "AI/ML",
+            image:asl
         },
         {
             title: "Miniature Fire-fighting Robot",
@@ -124,19 +127,21 @@ export default function Projects(){
 
     return(
         <div className={styles.bg}>
-            <div className={styles.head}>
-                projects
-                <div className={styles.underline}>
-                    <Image src={Acheik_Color} alt="acheik-underline" width={200} />
+            <SideMenu />
+            <div className={styles.main_content}>
+                <div className={styles.head}>
+                    projects
+                    <div className={styles.underline}>
+                        <Image src={Acheik_Color} alt="acheik-underline" width={200} />
+                    </div>
                 </div>
-            </div>
-            
-            <ProjectFilter 
-                activeFilter={activeFilter} 
-                onFilterChange={setActiveFilter} 
-            />
-            
-            <div className={styles.projects_container}>
+                
+                <ProjectFilter 
+                    activeFilter={activeFilter} 
+                    onFilterChange={setActiveFilter} 
+                />
+                
+                <div className={styles.projects_container}>
                 {filteredProjects.map((project, index) => (
                     <ProjectCard
                         key={index}
@@ -147,6 +152,7 @@ export default function Projects(){
                         image ={project.image}
                     />
                 ))}
+            </div>
             </div>
             
             <MenuBar/>

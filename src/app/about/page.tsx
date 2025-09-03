@@ -1,5 +1,6 @@
 'use client'
 import MenuBar from "../../../components/MenuBar/MenuBar";
+import SideMenu from "../components/SideMenu/SideMenu";
 import Image from "next/image";
 import pp from "/public/assets/port_image.png"
 import Acheik_Color from '/public/assets/acheik-color.png'
@@ -7,6 +8,8 @@ import styles from "./about.module.css"
 export default function About(){
     return(
         <div className={styles.bg}>
+            <SideMenu />
+            <div className={styles.main_content}>
             {/* <div className={styles.acheik_color}>
                 <Image src={Acheik_Color} alt="acheik-image" width={400} />
                 <Image src={Acheik_Color} alt="acheik-image" width={400} />
@@ -32,6 +35,7 @@ export default function About(){
                     style={{ borderRadius: '40px' }}/>
                 </div>
                 
+            </div>
             </div>
             <MenuBar/>
         </div>

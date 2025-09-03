@@ -110,14 +110,22 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .page {
-    padding: 32px;
-    padding-bottom: 80px;
+    padding: 20px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .main {
     align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
   }
 
   .main ol {
@@ -126,6 +134,8 @@
 
   .ctas {
     flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
   .ctas a {

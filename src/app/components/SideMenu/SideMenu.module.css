@@ -1,0 +1,89 @@
+.side_menu {
+    width: 15px;
+    min-width: 150px;
+    max-width: 150px;
+    height: fit-content;
+    background: rgba(50, 50, 50, 0.3);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    z-index: 10;
+    flex-shrink: 0;
+}
+
+.profile_section {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+}
+
+.name {
+    font-family: 'Sahitya', sans-serif;
+    color: #FFFFE0;
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: normal;
+}
+
+.title {
+    font-family: 'Sahitya', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.contact_section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact_link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact_link img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0.9);
+}
+
+.contact_link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.link_label {
+    font-family: 'Sahitya', sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .side_menu {
+        width: 220px;
+        min-width: 220px;
+        max-width: 220px;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .side_menu {
+        display: none;
+    }
+}
