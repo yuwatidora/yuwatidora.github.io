@@ -1,9 +1,10 @@
+//for project card, make the size of the image also malleable
 'use client'
 import { useState } from "react";
-import MenuBar from "../../../components/MenuBar/MenuBar";
+import MenuBar from "../components/MenuBar/MenuBar";
 import SideMenu from "../components/SideMenu/SideMenu";
-import ProjectCard from "../../../components/ProjectCard/ProjectCard";
-import ProjectFilter from "../../../components/ProjectFilter/ProjectFilter";
+import ProjectCard from "../components/ProjectCard/ProjectCard";
+import ProjectFilter from "../components/ProjectFilter/ProjectFilter";
 import Image from "next/image";
 import Acheik_Color from '/public/assets/acheik-color.png'
 import styles from "./projects.module.css"
@@ -11,6 +12,11 @@ import mamawell from "../../../public/assets/shot.png"
 import cashew from "../../../public/assets/cashew.png"
 import romi from "../../../public/assets/romiFrontView.png"
 import asl from "../../../public/assets/asl.png"
+import hh24 from "../../../public/assets/hh24.png"
+import roboarm from "../../../public/assets/roboarm.png"
+import wildfire from "../../../public/assets/wildfire.png"
+import mumfrog from "../../../public/assets/mumfrog.png"
+
 
 export default function Projects(){
     const [activeFilter, setActiveFilter] = useState("All");
@@ -29,7 +35,7 @@ export default function Projects(){
             title: "Fall Detector",
             description: "An IOS application that scrapes the accelorometer data from an iphone to alert whether user (senior) has fallen and alerts care givers.",
             technologies: ["React Native", "Javascript"],
-            github: "https://github.com/yuwatidora/HackMIT_2024",
+            github: "https://github.com/KhanhKhuat1504/Cashew",
             category: "Web/Mobile",
             image: cashew
         },
@@ -39,7 +45,7 @@ export default function Projects(){
             technologies: ["Python", "TensorFlow", "OpenCV", "Mediapipe"],
             github: "https://github.com/yuwatidora/asl_live_detection",
             category: "AI/ML",
-            image:asl
+            //image:asl
         },
         {
             title: "Miniature Fire-fighting Robot",
@@ -47,7 +53,7 @@ export default function Projects(){
             technologies: ["C++", "Arduino"],
             github: "https://github.com/yuwatidora/fire-fighting-robot-arduino/blob/main/FireFighting_Mission.pdf",
             category: "Robotics", 
-            image: romi
+            //image: romi
         },
         {
             title: "Asteroids",
@@ -61,14 +67,16 @@ export default function Projects(){
             description: "The Official Website for Mount Holyoke College's annual hackathon: HackHolyoke 2024.",
             technologies: ["Javascript", "NextJs"],
             github: "https://github.com/yuwatidora/HH24",
-            category: "Web/Mobile"
+            category: "Web/Mobile",
+            image: hh24
         },
         {
             title: "Robot Arm Manipulator",
             description: "A Mujoco Simulation to make a robot arm insert itself in a box using the Newton Raphson optmization method at different randomness levels.",
             technologies: ["Mujoco", "Python"],
             github: "https://github.com/yuwatidora/CS403_BoxControlCompetition/blob/main/CS403_Final_Report.pdf",
-            category: "Robotics"
+            category: "Robotics",
+            image: roboarm
         },
         {
             title: "Yu-Instagram",
@@ -96,19 +104,21 @@ export default function Projects(){
             description: "A python game that is a re-imagination of the arcade game frogger.",
             technologies: ["Python", "Pygame"],
             github: "https://github.com/yuwatidora/gameproject",
-            category: "Game"
+            category: "Game",
+            image: mumfrog
         },
         {
             title: "Wild Fire Detector",
             description: "A computer vision project that detects whether an image contains wildfire or not.",
             technologies: ["Python", "Tensorflow", "OpenCV"],
             github: "https://github.com/yuwatidora/wildfire_detect",
-            category: "AI/ML"
+            category: "AI/ML",
+            image: wildfire
         },
         {
             title: "Sride: a ride-share app",
             description: "An IOS application for a college community to post requests to share rides and offers to split the cost of a ride.",
-            technologies: [],
+            technologies: ["Swift"],
             github: "https://github.com/AuYuRa/sride",
             category: "Web/Mobile"
         },

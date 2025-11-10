@@ -1,0 +1,85 @@
+.head{
+   display: flex;
+   flex-direction: column;
+   position:relative;
+   margin-top: -55%;
+   align-items: center;
+   width: 100%;
+   transition: all 0.3s ease;
+}
+
+.yuwatinyi{
+    font-family: 'Sahitya', sans-serif;
+    font-size: 400%;
+    color: floralwhite;
+    text-align: center;
+    transition: all 0.3s ease;
+    /* margin-right: 35%;
+    margin-top: 10%; */
+}
+
+.acheik_color{
+    margin-top: -10%;
+    width: clamp(200px, 100%, 400px);
+    transition: all 0.3s ease;
+    
+    /* margin-left:-12%; */
+}
+
+.burmese{
+    margin-top: -5%;
+    margin-left: 0;
+    width: clamp(150px, 80%, 300px);
+    transition: all 0.3s ease;
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .head {
+        margin-top: -55%;
+    }
+}
+
+/* Medium screens */
+@media (max-width: 1024px) {
+    .head {
+        margin-top: -45%;
+    }
+    
+    .burmese {
+        margin-left: 15%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .head {
+        margin-top: -35%;
+    }
+    
+    .acheik_color {
+        margin-top: -8%;
+    }
+    
+    .burmese {
+        margin-left: 10%;
+        margin-top: -3%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 460px) {
+    .head {
+        margin-top: -25%;
+        max-width: 90%;
+    }
+    
+    .acheik_color {
+        margin-top: -15%;
+    }
+    
+    .burmese {
+        margin-left: -5%;
+        margin-top: -10%;
+    }
+}

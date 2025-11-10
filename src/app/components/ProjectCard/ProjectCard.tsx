@@ -14,21 +14,18 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ title, description, technologies, github, image}: ProjectCardProps) {
     return (
-        <div className={styles.project_item}>
-            <a href={github} target="_blank" rel="noopener noreferrer" className={styles.project_image_link}>
-                <div className={styles.project_image_placeholder}>
-                    {image ? (
-                        <Image src={image} 
-                        alt = "project image"
+        <a href={github} target="_blank" rel="noopener noreferrer" className={styles.project_item}>
+            {image && (
+                <div className={styles.project_image_background}>
+                    <Image 
+                        src={image} 
+                        alt="project image"
                         className="cardPic"
-                        priority/>
-                    ) : (
-                        <div className={styles.no_image_placeholder}>
-                            <span>No Image Available</span>
-                        </div>
-                    )}
+                        priority
+                        fill
+                    />
                 </div>
-            </a>
+            )}
             
             <div className={styles.project_content}>
                 <div className={styles.project_title}>{title}</div>
@@ -40,6 +37,6 @@ export default function ProjectCard({ title, description, technologies, github, 
                     ))}
                 </div>
             </div>
-        </div>
+        </a>
     );
 }

@@ -32,10 +32,6 @@ export default function LoadingTransition({ onComplete }: LoadingTransitionProps
     return (
         <div className={`${styles.loading_container} ${showContent ? styles.fade_out : ''}`}>
             <div className={styles.loading_content}>
-                <div className={styles.logo_container}>
-                    <div className={styles.logo_text}>YU WATI NYI</div>
-                    <div className={styles.subtitle}>Portfolio</div>
-                </div>
                 
                 <div className={styles.progress_container}>
                     <div className={styles.progress_bar}>
@@ -44,7 +40,6 @@ export default function LoadingTransition({ onComplete }: LoadingTransitionProps
                             style={{ width: `${progress}%` }}
                         ></div>
                     </div>
-                    <div className={styles.progress_text}>{progress}%</div>
                 </div>
                 
                 <div className={styles.loading_dots}>

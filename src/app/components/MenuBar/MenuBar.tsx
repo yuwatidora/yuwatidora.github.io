@@ -13,19 +13,44 @@ const navItems = [
     { href: '/blog', label:'blog'},
 ]
 
+const phoneNavItems = [
+    { href: '/', label: 'h'},
+    { href: '/about', label: 'a'}, 
+    { href: '/projects', label: 'p'},
+    { href: '/resume', label: 'r'}, 
+    { href: '/blog', label:'b'},
+]
+
 export default function MenuBar(){
     const pathname = usePathname();
     const [mounted, setMounted] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
         setMounted(true); // only render after client hydration
     }, []);
 
+    useEffect(() => {
+        setIsMobile(window.innerWidth <= 460);
+
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 460)
+        }; 
+
+        window.addEventListener('resize', handleResize)
+
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        };
+    }, []); 
+
     if (!mounted) return null; // avoid hydration mismatch
+
+    const currNavItems = isMobile ? phoneNavItems : navItems;
 
     return (
         <nav className = {styles.menu}>
-            {navItems.map((item) => (
+            {currNavItems.map((item) => (
                 <Link
                     style={{ fontSize: '1.4rem', padding: '0.8rem'}}
                     key ={item.href}

@@ -1,5 +1,5 @@
 'use client'
-import MenuBar from "../../../components/MenuBar/MenuBar";
+import MenuBar from "../components/MenuBar/MenuBar";
 import SideMenu from "../components/SideMenu/SideMenu";
 import Image from "next/image";
 import pp from "/public/assets/port_image.png"
@@ -10,12 +10,7 @@ export default function About(){
         <div className={styles.bg}>
             <SideMenu />
             <div className={styles.main_content}>
-            {/* <div className={styles.acheik_color}>
-                <Image src={Acheik_Color} alt="acheik-image" width={400} />
-                <Image src={Acheik_Color} alt="acheik-image" width={400} />
-                <Image src={Acheik_Color} alt="acheik-image" width={400} />
-                <Image src={Acheik_Color} alt="acheik-image" width={400} />
-            </div> */}
+
             <div className={styles.head}>
                 about me
                 <div className={styles.underline}>
@@ -31,8 +26,8 @@ export default function About(){
                     </p>
                 </div>
                 <div className={styles.image_wrapper}>
-                    <Image src={pp} width ={300} alt="profile image" 
-                    style={{ borderRadius: '40px' }}/>
+                    <Image src={pp} width ={260} alt="profile image" 
+                    style={{ borderRadius: '300px' }}/>
                 </div>
                 
             </div>

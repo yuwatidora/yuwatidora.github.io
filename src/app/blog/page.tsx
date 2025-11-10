@@ -1,5 +1,5 @@
 'use client'
-import MenuBar from "../../../components/MenuBar/MenuBar";
+import MenuBar from "../components/MenuBar/MenuBar";
 export default function Blog(){
     return(
         <div>

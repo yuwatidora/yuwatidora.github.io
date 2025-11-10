@@ -2,7 +2,7 @@
     font-family: 'Sahitya', sans-serif;
     font-size: 300%;
     color: #FFFFE0;
-    margin-left: 0%;
+    margin-left: 5%;
     margin-top: 0%;
     z-index: 100;
     position: relative;
@@ -16,14 +16,14 @@
 }
 
 .bg{
-    background-color: rgba(69, 69, 69, 0.5);
+    /* background-color: rgba(69, 69, 69, 0.5); */
     margin: 50px auto 20px auto;
     padding: 30px;
     max-width: 90%;
     border-radius: 20px;
     max-height: 80vh;
     overflow-y: auto;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
     position: relative;
     display: flex;
     gap: 2rem;
@@ -31,18 +31,19 @@
 
 .main_content {
     flex: 1;
-    padding: 0;
-    margin: 0;
+    background-color: rgba(69, 69, 69, 0.5);
     min-width: 0;
     overflow-x: hidden;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .projects_container {
-    margin-top: 20px;
+    margin: 20px auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 20px;
-    width: 100%;
+    width: 90%;
     box-sizing: border-box;
 }
 
