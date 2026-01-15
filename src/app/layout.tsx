@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Yu Wati Nyi",
   description: "Personal site",
   icons: {
-    icon: "./favicon.png",
+    icon: "./favicon.ico",
   },
 };
 
