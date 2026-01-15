@@ -11,6 +11,9 @@ const sahitya = Sahitya({
 export const metadata: Metadata = {
   title: "Yu Wati Nyi",
   description: "Personal site",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
