@@ -1,0 +1,22 @@
+.cv_page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  
+  /* layout */
+  margin-left: 220px; /* matches side menu */
+  padding: 4rem 6rem;
+}
+
+.side_menu_space {
+  width: 220px; /* matches side menu width */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+
+  background-image: url("/assets/acheik-nocolor.png");
+  background-repeat: repeat-y;
+  background-size: 1200px auto; 
+  
+}

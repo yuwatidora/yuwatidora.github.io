@@ -1,0 +1,86 @@
+.viewpage {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.side_menu_space {
+  width: 220px; /* matches side menu width */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+
+  background-image: url("/assets/acheik-nocolor.png");
+  background-repeat: repeat-y;
+  background-size: 1200px auto;
+}
+
+/* main writing column */
+.writingpage {
+  margin-left: 220px; /* same offset as home */
+  padding: 4rem 6rem;
+}
+
+/* Segoe UI just for writing content */
+.writingpage {
+  font-family:
+    "Segoe UI",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  line-height: 1.75;
+  color: #e9e2d8;
+}
+.heading{
+    color:#f6e7a3;
+    font-size: 2.5rem;
+    font-family: "Sahitya", serif;
+}
+/* intro block */
+.intro {
+  max-width: 65ch;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* divider between blog posts */
+.post_divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(233, 226, 216, 0.2);
+  border: none;
+  margin: 2rem 0;
+}
+
+.intro h1 {
+  font-size: 2rem;
+  margin: 0 0 0.75rem;
+}
+
+/* list of posts */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 65ch;
+}
+
+/* individual post preview */
+.postPreview h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+}
+
+.meta {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin: 0 0 0.75rem;
+  color: #e9e2d8;
+}
+
+.postPreview p {
+  margin: 0 0 0.5rem;
+}

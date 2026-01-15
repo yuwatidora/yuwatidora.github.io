@@ -1,66 +1,61 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import SideMenu from "./components/SideMenu/SideMenu";
+
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className={styles.viewpage}>
+      <SideMenu/>
+
+      <div className={styles.homepage}>
+
+        <div className={styles.headers}>
+          <div className={styles.hero_image}>
+
+          </div>
+          <div className={styles.name_heading}>
+            <h1>yu wati nyi</h1>
+
+            <div className={styles.acheik_banner}>
             <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+              src="/assets/acheik-color.png"
+              alt="acheik banner"
+              width={1200}  
+              height={160}   
+              className={styles.acheikImage}
+              />
+            </div>
+
+            <div className={styles.icons}>
+              <a href="mailto:yuwatinyi003@gmail.com" target="_blank" rel="noopener noreferrer" className={styles.contact_link}>
+                <Image src="/assets/email.png" alt="email image" width={40}height={40}/>
+              </a>
+
+              <a href="https://linkedin.com/in/yuwatinyi" target="_blank" rel="noopener noreferrer" className={styles.contact_link}>
+                <Image src="/assets/business.png"alt="email image"width={40}height={40}/>
+              </a>
+
+              <a href="https://github.com/yuwatidora" target="_blank" rel="noopener noreferrer" className={styles.contact_link}>
+                <Image src="/assets/github.png"alt="email image"width={40}height={40}/>
+              </a>
+
+            </div>
+
+          </div>
+
         </div>
-      </main>
+
+        <div className={styles.intro}>
+          <p>Hey there!</p>
+
+          <p> I’m Yu Wati Nyi (Dora), an early-career software engineer. My experience spans developing fintech software and conducting undergraduate research in robotics and motion planning. </p>
+
+          <p> I recently graduated with a B.A in Computer Science and Economics from Mount Holyoke College and currently contribute to The Mifos Initiative — a UN-recognized Digital Public Good advancing open-source fintech solutions for global financial inclusion.</p>
+            
+          <p>P.S. the patterns you see here are called ‘acheik’, they are often found on burmese clothing. </p>
+        </div>        
+      </div>
     </div>
   );
 }

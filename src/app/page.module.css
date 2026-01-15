@@ -1,141 +1,129 @@
-.page {
-  --background: #fafafa;
-  --foreground: #fff;
-
-  --text-primary: #000;
-  --text-secondary: #666;
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
-  display: flex;
+.viewpage{
+  position: relative;
   min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
+  overflow: hidden;
+
 }
 
-.main {
-  display: flex;
+.homepage {
+  --text-main: #e9e2d8;
+  --text-muted: #e6ddd2;
+  /* --overlay: rgba(0, 0, 0, 0.35); */
+}
+
+.homepage {
+  
+  position: relative;
   min-height: 100vh;
-  width: 100%;
+  overflow: hidden;
+  
+  /* layout */
+  margin-left: 220px; /* matches side menu */
+  padding: 4rem 6rem;
+
+  
+}
+/* background pattern */
+.homepage::before {
+  
+  content: "";
+  position: absolute;
+  inset: -10%; /* extra room so rotation doesn’t clip */
+
+  background-image: url("/assets/acheik-nocolor.png");
+  background-repeat: repeat-y;
+  background-size: 1300px auto; /* KEEP intrinsic height */
+  background-position: 20px 80px;
+
+  /* overlap control */
+  transform:
+    translateX(100px)
+    rotate(-0.45deg);      /* right side up */
+
+  transform-origin: center;
+
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.homepage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--overlay);
+  z-index: 0;
+}
+
+/* ensure content is above background */
+.homepage > * {
+  position: relative;
+  z-index: 1;
+}
+
+.acheik_banner {
+  position: relative;
+
+}
+.acheikImage {
+  height: 50px;  /* whatever you want */
+  width: auto;   /* auto adjust based on aspect ratio */
+}
+
+.headers{
+  margin-left: 5rem;
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+
+.intro{
+  margin: 2.5rem auto 0;
+  font-size: 1.05rem;
   max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
+  line-height: 1.5;
+  color: var(--text-main);
 }
 
-.intro {
+.intro p{
+  margin: 0 0 0.7rem;
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+
+.hero_image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: url("/assets/yuwatidora.png");
+  background-size: cover;
+  background-position: center 35%; /* tweak this */
+  background-repeat: no-repeat;
+  flex: 0 0 auto;
+}
+
+.name_heading{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 24px;
+  gap: 0.75rem;
+
 }
 
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
+.name_heading h1{
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--text-main);
 }
 
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
-}
-
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.ctas {
+.icons{
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
+  flex-direction: center;
+  gap: 20px
 }
 
-.ctas a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
-}
-
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
-}
-
-a.secondary {
-  border-color: var(--button-secondary-border);
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-}
-
-@media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
-
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
-
-  .page {
-    --background: #000;
-    --foreground: #000;
-
-    --text-primary: #ededed;
-    --text-secondary: #999;
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
-  }
+.icons img{
+  opacity: 0.9;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.55));
 }
