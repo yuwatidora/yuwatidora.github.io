@@ -1,15 +1,15 @@
 import Link from "next/link";
 import { getAllPosts } from "../../../lib/writing";
-import SideMenu from "../components/SideMenu/SideMenu";
+import ResponsiveLayout from "../components/ResponsiveLayout/ResponsiveLayout";
 import styles from "./writing.module.css";
 
 export default function WritingIndex() {
   const posts = getAllPosts();
 
   return (
+    <ResponsiveLayout>
     <div className={styles.viewpage}>
       <div className={styles.side_menu_space}>
-        <SideMenu />
       </div>
       <main className={styles.writingpage}>
         <p className={styles.heading}>writings</p>
@@ -39,5 +39,6 @@ export default function WritingIndex() {
         </div>
       </main>
     </div>
+    </ResponsiveLayout>
   );
 }

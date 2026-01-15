@@ -1,15 +1,15 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import SideMenu from "../components/SideMenu/SideMenu";
+import ResponsiveLayout from "../components/ResponsiveLayout/ResponsiveLayout";
 import Selected from "../components/Selected/Selected";
 import Research from "../components/Research/Research";
 import Projects from "../components/Projects/Projects";
 
 export default function CV() {
   return (
+    <ResponsiveLayout>
     <div>
       <div className={styles.side_menu_space}>
-      <SideMenu/>
       </div>
       <div className={styles.cv_page}>
         <div className='container' id='experiences'>
@@ -26,5 +26,6 @@ export default function CV() {
 
       </div>
     </div>
+    </ResponsiveLayout>
   );
 }

@@ -92,6 +92,58 @@
   font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* Responsive styles */
+@media (max-width: 1040px) {
+  .homepage {
+    margin-left: clamp(100px, 15vw, 220px);
+    padding: clamp(2rem, 4vw, 4rem) clamp(2rem, 5vw, 6rem);
+  }
+  
+  .headers {
+    margin-left: clamp(2rem, 4vw, 5rem);
+    margin-top: clamp(2rem, 4vw, 5rem);
+    gap: clamp(1.5rem, 3vw, 3rem);
+  }
+  
+  .hero_image {
+    width: clamp(150px, 20vw, 200px);
+    height: clamp(150px, 20vw, 200px);
+  }
+  
+  .name_heading h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  }
+}
+
+@media (max-width: 900px) {
+  .homepage {
+    margin-left: 0;
+    padding: 2rem;
+  }
+  
+  .headers {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 2rem;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .hero_image {
+    width: clamp(120px, 30vw, 180px);
+    height: clamp(120px, 30vw, 180px);
+  }
+  
+  .name_heading h1 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+  
+  .intro {
+    padding: 0 1rem;
+  }
+}
+
 
 .hero_image {
   width: 200px;
@@ -127,3 +179,4 @@
   opacity: 0.9;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.55));
 }
+

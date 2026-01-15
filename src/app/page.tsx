@@ -1,13 +1,12 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import SideMenu from "./components/SideMenu/SideMenu";
+import ResponsiveLayout from "./components/ResponsiveLayout/ResponsiveLayout";
 
 
 export default function Home() {
   return (
+    <ResponsiveLayout>
     <div className={styles.viewpage}>
-      <SideMenu/>
-
       <div className={styles.homepage}>
 
         <div className={styles.headers}>
@@ -49,13 +48,12 @@ export default function Home() {
         <div className={styles.intro}>
           <p>Hey there!</p>
 
-          <p> I’m Yu Wati Nyi (Dora), an early-career software engineer. My experience spans developing fintech software and conducting undergraduate research in robotics and motion planning. </p>
+          <p> I’m Yu Wati Nyi (Dora), an early-career software engineer. I build and deploy production-level APIs, machine learning pipelines, and scalable software systems. My experience spans fintech development and undergraduate research in robotics and motion planning. </p>
 
           <p> I recently graduated with a B.A in Computer Science and Economics from Mount Holyoke College and currently contribute to The Mifos Initiative — a UN-recognized Digital Public Good advancing open-source fintech solutions for global financial inclusion.</p>
             
           <p>P.S. the patterns you see here are called ‘acheik’, they are often found on burmese clothing. </p>
         </div>        
       </div>
-    </div>
-  );
+    </div>    </ResponsiveLayout>  );
 }

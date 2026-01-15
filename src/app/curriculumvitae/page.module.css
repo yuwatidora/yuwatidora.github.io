@@ -20,3 +20,26 @@
   background-size: 1200px auto; 
   
 }
+
+/* Responsive styles */
+@media (max-width: 1040px) {
+  .cv_page {
+    margin-left: clamp(100px, 15vw, 220px);
+    padding: clamp(2rem, 4vw, 4rem) clamp(2rem, 5vw, 6rem);
+  }
+  
+  .side_menu_space {
+    width: clamp(100px, 15vw, 220px);
+  }
+}
+
+@media (max-width: 900px) {
+  .cv_page {
+    margin-left: 0;
+    padding: 2rem;
+  }
+  
+  .side_menu_space {
+    display: none;
+  }
+}

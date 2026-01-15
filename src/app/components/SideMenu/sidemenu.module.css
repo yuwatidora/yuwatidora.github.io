@@ -7,7 +7,8 @@
   padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertically center menu items */
+  justify-content: center;
+  z-index: 10;
 }
 
 .list {
@@ -27,6 +28,11 @@
   color: #f4b898;
 }
 
+.list a.active {
+  color: #f4b898;
+  font-weight: bold;
+}
+
 .copyright {
   position: fixed;
   bottom: 20px;
@@ -38,4 +44,37 @@
   user-select: none;
 }
 
+/* Responsive styles */
+@media (max-width: 1040px) {
+  .sidemenu {
+    width: clamp(100px, 15vw, 200px);
+  }
+  
+  .list {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    gap: clamp(1rem, 2vw, 1.5rem);
+    padding-left: clamp(0.5rem, 2vw, 1.5rem);
+  }
+}
 
+@media (max-width: 900px) {
+  .sidemenu {
+    transform: translateX(-100%);
+    width: 250px;
+    background-image: url("/assets/acheik-nocolor.png");
+    background-repeat: repeat-y;
+    background-size: 1200px auto;
+    background-color: rgba(37, 37, 37, 0.98);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .sidemenu.open {
+    transform: translateX(0);
+  }
+  
+  .list {
+    font-size: 1.2rem;
+    padding-left: 1rem;
+  }
+}
