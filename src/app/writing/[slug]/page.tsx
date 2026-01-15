@@ -2,6 +2,14 @@ import { notFound } from "next/navigation";
 import { getPostBySlug, markdownToHtml } from "../../../../lib/writing";
 import SideMenu from "../../components/SideMenu/SideMenu";
 import styles from "../writing.module.css";
+import { getAllPosts } from "../../../../lib/writing";
+
+export async function generateStaticParams() {
+  const posts = getAllPosts(); // fetch all posts at build time
+  return posts.map(post => ({
+    slug: post.slug, // must match the dynamic route [slug]
+  }));
+}
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
